@@ -1,4 +1,4 @@
-function findLocation() {
+const findLocation = ()=> {
 
    const status = document.querySelector('.status')
    
@@ -13,8 +13,8 @@ function findLocation() {
    }
    
    navigator.geolocation.getCurrentPosition(success, error)
-
+   
 }
 
 const button = document.querySelector('.location')
-button.addEventListener('click', findLocation() , false)
+button.addEventListener('click', findLocation, false)
