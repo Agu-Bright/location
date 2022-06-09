@@ -3,8 +3,9 @@ function findLocation() {
    const status = document.querySelector('.status')
    
    const success = async (position)=>{
-       const coordinates = await position
+       const coordinates = await position.coords.latitude
        console.log(coordinates);
+       status.textContent = coordinates
    }
 
    const error = ()=>{
