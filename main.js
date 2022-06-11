@@ -1,11 +1,14 @@
 const findLocation = ()=> {
 
-   const status = document.querySelector('.status')
+   const longitude = document.querySelector('.longitude')
+   const lathitude = document.querySelector('.latitude')
    
    const success = async (position)=>{
-       const coordinates = await position.coords.latitude
+       const lat = await position.coords.latitude
+       const long = await position.coords.longitude
        console.log(coordinates);
-       status.textContent = coordinates
+       lathitude.textContent = lat;
+       longitude.textContent = long;
    }
 
    const error = ()=>{
